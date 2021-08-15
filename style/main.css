@@ -1,0 +1,114 @@
+:root{/*Declaraçao e variaveis no css melhor para a reutilizalçao de cores por exemplo MAS PODE SER UTILIZADO EM OUTROS COMPONENTES */
+     --vermelho: #F40612;
+     --preto: #141414;
+     /*--azul:*/
+}
+/******************************************************************************************************************************************/
+*{ /*Resset CSS umas formas */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /*garante o tamnho de cada caixa ou seja garante o que o tamanho vai ser o mesmo declarado*/
+}
+/*******************************************************************************************************************************************/
+body
+{
+    background: var(--preto);
+    font-family: Arial,sans-serif;
+    color: #FFF;
+}
+/********************************************************************************************************************************************/
+/*Nav-bar*/
+header .container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+header .logo{
+    margin-left: 5px;
+    color: var(--vermelho);
+    height: 100px;
+    width: 150px;
+    /*font-family: 'Arial Black', Times;
+    font-size: 40px;*/
+}
+header nav a{
+    text-decoration: none;
+    color: #AAA;
+    margin-right: 10px;
+}
+
+header nav a:hover
+{
+    color: #FFF;
+}
+/*Filme principal*/
+.filme-principal
+{
+    font-size: 16px;
+    background: linear-gradient(rgba(0,0,0,.50),rgba(0,0,0,.50)100%), url('/assets/img/GotImg1.jpg'); 
+    /*Propriedade abreviada para definir a maioria das propriedades de fundo no mesmo lugar na folha de estilo.*/
+    height: 650px;
+    background-size: cover; /*Pega a area de cobertura do container*/
+    display: flex;/*Joga os padroes em linha (Row) equivale a flex-direction: row;*/
+    flex-direction: column; /*joga elementos em colunas*/
+    justify-content: center;
+    align-items: flex-start;
+}
+.filme-principal .description
+{
+    margin-top: 15px;
+    margin-bottom: 30px;
+}
+.filme-principal .titulo
+{
+    margin-top: 10%;
+    font-size: 50px;
+}
+.botao
+{
+    background-color: rgba(0, 0, 0,.50);
+    border: none;
+    color: #FFF;
+    padding: 15px 30px;
+    margin-right: 15px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: .5s ease all;
+}
+.assistir
+{
+    background-color: rgba(220, 6, 17, 0.9);
+}
+
+.botao:hover
+{
+    background-color: #FFF;
+    color: black;
+}
+.botao i
+{
+    margin-right: 10px;
+}
+.container
+{
+    margin-left: 30px;
+    margin-right: 100px;
+}
+.filme-principal .container
+{
+    width: 60%;
+}
+.box-filme{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: left bottom;
+    transition: transform 0.5s;
+}
+.box-filme:hover{
+    transform: scale(1.1) ;
+}
+.carrosel-filmes{
+    margin-top: 10px;
+}
